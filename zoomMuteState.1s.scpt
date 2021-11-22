@@ -22,9 +22,9 @@ if application "zoom.us" is running then
 		tell application process "zoom.us"
 			if exists (menu bar item "Meeting" of menu bar 1) then
 				if exists (menu item btnTitle of menu 1 of menu bar item "Meeting" of menu bar 1) then
-					set returnValue to "LIVE MIC"
+					set returnValue to ":mic.fill: | sfcolor=#53945d"
 				else
-					set returnValue to "MUTED"
+					set returnValue to ":mic.slash.fill: | sfcolor=#ff4d40"
 				end if
 			else
 				set returnValue to ""
@@ -35,6 +35,6 @@ else
 	set returnValue to ""
 end if
 
-return returnValue & "| size=18
+return returnValue & "| size=16
 ---
 zoomMuteState"
